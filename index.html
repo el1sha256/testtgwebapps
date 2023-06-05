@@ -11,18 +11,17 @@
     <textarea type="text" id="jsCodeInput"></textarea>
   <button onclick="executeJSCode()">Execute</button>
 
-  </form>
-
-  <p class="footer">
-    a <a href="https://scotch.io/tutorials/css/google-material-design-input-boxes-in-css3" target="_blank">tutorial</a> by <a href="https://scotch.io" target="_blank">scotch.io</a>
-  </p>
+    <p> Result: </p>
+    <p id="result"></p>
 
 </div>
     
     <script>
 function executeJSCode() {
   var jsCode = document.getElementById('jsCodeInput').value;
-  eval(jsCode);
+  let result = eval(jsCode);
+  let res_el = document.getElementById('result');
+  res_el.innerHTML = res_el;
 }
       
     </script>
