@@ -8,27 +8,8 @@
   <body>
   <div class="container">
 
-  <h2>Google Material Design in CSS3<small>Inputs</small></h2>
-
-  <form>
-
-    <div class="group">      
-      <input type="text" required>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Name</label>
-    </div>
-
-    <div class="group">      
-      <input type="text" required>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Email</label>
-    </div>
-    
-    <button id="23">
-      23
-    </button>
+  <input type="text" id="jsCodeInput" />
+  <button onclick="executeJSCode()">Execute</button>
 
   </form>
 
@@ -39,11 +20,10 @@
 </div>
     
     <script>
-      var elem = document.getElementById("23");   
-    elem.onclick = function() {
-        alert(window.Telegram.WebApp.colorScheme);
-        return false;
-    };
+function executeJSCode() {
+  var jsCode = document.getElementById('jsCodeInput').value;
+  eval(jsCode);
+}
       
     </script>
   </body>
